@@ -1,0 +1,10 @@
+.img-container {
+    min-height: 75vh;
+    min-width: 30vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-container {
+    max-width: 20vw;
+}

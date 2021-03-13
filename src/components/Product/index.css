@@ -1,0 +1,12 @@
+.card-root {
+    max-width: 20vw;
+}
+
+.product-image {
+    height: 20vh;
+}
+
+.action-area {
+    display: flex;
+    justify-content: center;
+}

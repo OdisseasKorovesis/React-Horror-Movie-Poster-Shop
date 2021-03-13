@@ -1,0 +1,10 @@
+.products-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: .75rem;
+    height: .75rem;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: red;
+}

@@ -1,0 +1,12 @@
+.table-container {
+    border: .15rem solid black;
+    border-radius: 2.5%;
+}
+
+.table-title {
+    text-align: center;
+}
+
+.table {
+    max-width: 20rem;
+}
