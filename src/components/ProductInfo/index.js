@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { Container, Grid, Box } from '@material-ui/core'
 import ProductsContext from "../../context";
 import './index.css';
+import Recommendations from "../Recommendations";
 
 function ProductInfo() {
 
@@ -22,6 +23,7 @@ function ProductInfo() {
                     <p>Price: {`${productInfo.vote_average}`}</p>
                 </Box>
             </Grid>
+            <Recommendations/>
         </Container>
     )
 }

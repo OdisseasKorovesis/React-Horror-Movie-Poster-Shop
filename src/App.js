@@ -44,7 +44,8 @@ function App() {
 
   
 
-  const { response, query, setQuery } = useFetch('discover/movie', 'with_genres=27&page=2');
+  const { response, query, setQuery } = useFetch('discover/movie', 'with_genres=27&page=3');
+  console.log(response.results);
   listOfProducts = response.results;
 
   return (

@@ -13,8 +13,8 @@ function ListOfProducts() {
     const [displayedProducts, setDisplayedProducts] = useState(listOfProducts);
     
     const onChange = (event) => {
-        let keyword = event.target.value;
-        setDisplayedProducts(listOfProducts.filter(product => product.title.includes(keyword)));
+        let keyword = event.target.value.toLowerCase();
+        setDisplayedProducts(listOfProducts.filter(product => product.title.toLowerCase().includes(keyword)));
     };
 
     return (
@@ -22,7 +22,6 @@ function ListOfProducts() {
 
             <form class="form-inline my-2 my-lg-0" onChange={onChange}>
                 <input name="searchBar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
             <Grid container spacing={3}>
                 {displayedProducts.map((product, index) => (
