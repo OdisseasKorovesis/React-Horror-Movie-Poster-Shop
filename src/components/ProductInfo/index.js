@@ -1,15 +1,25 @@
-import { useContext } from "react";
-import { useParams } from "react-router";
+import { useContext, useEffect, useState } from "react";
+import { useParams, useLocation, useHistory } from "react-router";
 import { Container, Grid, Box } from '@material-ui/core'
 import ProductsContext from "../../context";
 import './index.css';
 import Recommendations from "../Recommendations";
+import useFetch from "../../hooks/useFetch";
 
 function ProductInfo() {
 
     const { listOfProducts } = useContext(ProductsContext);
     let { id } = useParams();
-    const productInfo = listOfProducts.find((product) => product.id == id);
+    
+    const {response, query, setQuery} = useFetch(`movie/${id}`, '');
+
+    useEffect(() => {
+        setQuery(`movie/${id}`, '');
+    }, [id])
+
+    
+    const productInfo = response;
+    
     const posterUrl = `https://image.tmdb.org/t/p/original/${productInfo.poster_path}`;
 
     return (

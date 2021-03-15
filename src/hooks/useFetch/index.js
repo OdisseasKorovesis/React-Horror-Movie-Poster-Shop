@@ -13,9 +13,11 @@ function useFetch(url, params) {
         }
     }
 
+
     useEffect(() => {
         const getResponse = async () => {
             try {
+                console.log(query);
                 console.log(`${domain}/${query}?api_key=${apiKey}&${params}`);
                 const response = await fetch(`${domain}/${query}?api_key=${apiKey}&${params}`, {
                     ...options
