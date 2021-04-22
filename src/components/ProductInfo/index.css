@@ -8,3 +8,13 @@
 .info-container {
     max-width: 20vw;
 }
+
+.movie-title {
+    font-family: 'Melted-Monster', cursive;
+    font-size: 3rem;
+}
+
+.add-button {
+    background-color: #3e0e0e;
+    color: white;
+}

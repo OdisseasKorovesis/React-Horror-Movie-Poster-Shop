@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@font-face {
+  font-family: 'Melted-Monster';
+  src: local('Melted-Monster'), url('./fonts/Melted-Monster.ttf') format('truetype');
+}

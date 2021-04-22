@@ -1,6 +1,8 @@
 .table-container {
     border: .15rem solid black;
     border-radius: 2.5%;
+    font-family: 'Melted-Monster', cursive;
+    background-color: #3e0e0e;
 }
 
 .table-title {
@@ -9,4 +11,8 @@
 
 .table {
     max-width: 20rem;
+}
+
+.table {
+    color: white;
 }

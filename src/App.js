@@ -18,6 +18,7 @@ function App() {
   const removeFromCart = (id) => {
     cartProducts.forEach((product) => {
       if (product.id == id) {
+        console.log('mpike')
         setCartProducts(cartProducts.filter(product => product.id !== id));
       }
     });
@@ -42,25 +43,28 @@ function App() {
     });
   };
 
-  
+
 
   const { response, query, setQuery } = useFetch('discover/movie', 'with_genres=27&page=3');
   console.log(response.results);
   listOfProducts = response.results;
 
   return (
-    <Router>
-      <ProductsContext.Provider value={{ listOfProducts, cartProducts, addToCart, removeFromCart, changeQuantity }}>
-        <Navbar />
-        <div>
-          <Route exact path='/' component={listOfProducts && ListOfProducts} />
-          <Route exact path='/cart' component={Cart} />
-          <Route exact path='/product/:id' component={ProductInfo} />
-          <Route exact path='/registration' component={Registration} />
-          <Route exact path='/login' component={Login} />
-        </div>
-      </ProductsContext.Provider>
-    </Router>
+    <div className="main-container">
+      <Router>
+        <ProductsContext.Provider value={{ listOfProducts, cartProducts, addToCart, removeFromCart, changeQuantity }}>
+          <Navbar />
+          <div>
+            <Route exact path='/' component={listOfProducts && ListOfProducts} />
+            <Route exact path='/cart' component={Cart} />
+            <Route exact path='/product/:id' component={ProductInfo} />
+            <Route exact path='/registration' component={Registration} />
+            <Route exact path='/login' component={Login} />
+          </div>
+        </ProductsContext.Provider>
+      </Router>
+    </div>
+
   );
 }
 
