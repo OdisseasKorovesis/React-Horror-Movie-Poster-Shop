@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React-Horror-Movie-Poster-Shop/static/css/main.12b0bfe7.chunk.css",
+    "main.js": "/React-Horror-Movie-Poster-Shop/static/js/main.e5ce8698.chunk.js",
+    "main.js.map": "/React-Horror-Movie-Poster-Shop/static/js/main.e5ce8698.chunk.js.map",
+    "runtime-main.js": "/React-Horror-Movie-Poster-Shop/static/js/runtime-main.454c7fc3.js",
+    "runtime-main.js.map": "/React-Horror-Movie-Poster-Shop/static/js/runtime-main.454c7fc3.js.map",
+    "static/js/2.61f53c0c.chunk.js": "/React-Horror-Movie-Poster-Shop/static/js/2.61f53c0c.chunk.js",
+    "static/js/2.61f53c0c.chunk.js.map": "/React-Horror-Movie-Poster-Shop/static/js/2.61f53c0c.chunk.js.map",
+    "static/js/3.ab432ff2.chunk.js": "/React-Horror-Movie-Poster-Shop/static/js/3.ab432ff2.chunk.js",
+    "static/js/3.ab432ff2.chunk.js.map": "/React-Horror-Movie-Poster-Shop/static/js/3.ab432ff2.chunk.js.map",
+    "index.html": "/React-Horror-Movie-Poster-Shop/index.html",
+    "static/css/main.12b0bfe7.chunk.css.map": "/React-Horror-Movie-Poster-Shop/static/css/main.12b0bfe7.chunk.css.map",
+    "static/js/2.61f53c0c.chunk.js.LICENSE.txt": "/React-Horror-Movie-Poster-Shop/static/js/2.61f53c0c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/React-Horror-Movie-Poster-Shop/static/media/Melted-Monster.e388d190.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.454c7fc3.js",
+    "static/js/2.61f53c0c.chunk.js",
+    "static/css/main.12b0bfe7.chunk.css",
+    "static/js/main.e5ce8698.chunk.js"
+  ]
+}
