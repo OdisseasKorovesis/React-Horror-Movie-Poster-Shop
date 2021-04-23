@@ -1,8 +1,11 @@
 import { useForm } from "react-hook-form";
 import { useHistory } from 'react-router-dom';
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import ProductsContext from "../../context";
 
 function InformationForm(props) {
+
+    const {cartProducts, emptyCart} = useContext(ProductsContext);
 
     const { register, handleSubmit, errors, watch } = useForm();
     const history = useHistory();
@@ -10,6 +13,7 @@ function InformationForm(props) {
     const onSubmit = (data) => {
         props.toggleShowInfoForm(false);
         props.toggleShowCompletionMessage(true);
+        emptyCart();
 
     }
 

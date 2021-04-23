@@ -40,3 +40,12 @@
     /* font-size: 2rem; */
 }
 
+.link-icon {
+    color: inherit;
+    transition: all .3s;
+}
+
+.link-icon:hover {
+    color:red;
+}
+

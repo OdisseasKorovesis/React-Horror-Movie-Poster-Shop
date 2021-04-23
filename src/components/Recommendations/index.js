@@ -31,8 +31,8 @@ function Recommendations() {
         <h2 className="recommendations-title text-white mt-4">Other similar products:</h2>
         <div className="row mb-5">
             {recommended && recommended.length != 0 ?
-                recommended.slice(0, 4).map((product) => (
-                    <div className="col-3">
+                recommended.slice(0, 3).map((product) => (
+                    <div className="col-4">
                         <Product key={product.id} id={product.id} title={product.title} description={""} price={product.vote_average} poster={product.poster_path}></Product>
                     </div>
                 )) :

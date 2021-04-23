@@ -31,6 +31,10 @@ function App() {
     });
   }
 
+  const emptyCart = () => {
+    setCartProducts([]);
+  }
+
   const addToCart = (id) => {
     listOfProducts.forEach((product) => {
       if (product.id == id) {
@@ -60,14 +64,14 @@ function App() {
 
 
 
-  const { response, query, setQuery } = useFetch('discover/movie', 'with_genres=27&page=3');
+  const { response, query, setQuery } = useFetch('discover/movie', 'with_genres=27&sort_by=populatity_desc&page=1');
   console.log(response.results);
   listOfProducts = response.results;
 
   return (
     <div className="main-container">
       <Router>
-        <ProductsContext.Provider value={{ listOfProducts, cartProducts, addToCart, removeFromCart, changeQuantity }}>
+        <ProductsContext.Provider value={{ listOfProducts, cartProducts, addToCart, removeFromCart, emptyCart, changeQuantity }}>
           <Navbar />
           <div>
             <Route exact path='/React-Horror-Movie-Poster-Shop/' component={listOfProducts && ListOfProducts} />

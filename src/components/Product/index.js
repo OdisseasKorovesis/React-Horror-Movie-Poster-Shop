@@ -21,23 +21,25 @@ function Product(props) {
     return (
         <div className="wrapper">
             <Card className='card-root'>
+            <div className="card-content">
                 <CardActionArea>
                     <CardMedia
                         className='product-image'
                         image={posterUrl}
-                        title='Product Image'
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2">
-                            <p className="product-title">{props.title}</p>
-                        </Typography>
-                        <Typography gutterBottom variant="body2" color="textSecondary" component="p">
-                            {getDescriptionText()}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            Total price: <span>{props.price * productCount}€</span>
-                        </Typography>
-                    </CardContent>
+                        title='Product Image' />
+                   
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                <p className="product-title">{props.title}</p>
+                            </Typography>
+                            <Typography gutterBottom variant="body2" color="textSecondary" component="p">
+                                {getDescriptionText()}
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" component="p">
+                                Total price: <span>{props.price * productCount}€</span>
+                            </Typography>
+                        </CardContent>
+                   
                 </CardActionArea>
                 <div className='action-area'>
                     <CardActions>
@@ -50,6 +52,7 @@ function Product(props) {
                             <span className="add-btn">Add to Cart</span>
                         </Button>
                     </CardActions>
+                    </div>
                 </div>
 
             </Card>

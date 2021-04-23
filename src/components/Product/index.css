@@ -18,7 +18,7 @@
 .add-btn {
     font-family: 'Melted-Monster', cursive;
     font-size: 1.5rem;
-    color: #dd2424;
+    color: white;
     text-decoration: none;
 }
 
@@ -30,6 +30,10 @@
 
 }
 
-.link {
+.link:hover {
     text-decoration: none;
+}
+
+.card-content {
+    background-color: #dd2424;
 }
