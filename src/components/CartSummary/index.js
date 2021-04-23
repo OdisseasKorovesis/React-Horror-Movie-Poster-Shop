@@ -34,14 +34,14 @@ function CartSummary() {
                             <TableCell component="th" scope="row" className="text-white">
                                 {product.title}
                             </TableCell>
-                            <TableCell className="text-white">{product.vote_average}</TableCell>
+                            <TableCell className="text-white">{product.vote_average}€</TableCell>
                             <TableCell className="text-white">{product.quantity}</TableCell>
                         </TableRow>
                     ))}
                     <TableRow>
                         <TableCell rowSpan={3} />
                         <TableCell className="text-white" colSpan={1}>Total Price</TableCell>
-                        <TableCell className="text-white">{calculateTotalPrice()}</TableCell>
+                        <TableCell className="text-white">{calculateTotalPrice()}€</TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
