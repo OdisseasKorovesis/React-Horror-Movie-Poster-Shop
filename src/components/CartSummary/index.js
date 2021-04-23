@@ -46,7 +46,7 @@ function CartSummary() {
                 </TableBody>
             </Table>
             {cartProducts.length !== 0 ? <div className="row justify-content-center">
-                <Link to="/checkout">
+                <Link to="/React-Horror-Movie-Poster-Shop/checkout">
                     <button className="btn">Checkout</button>
                 </Link>
             </div> : <></>}

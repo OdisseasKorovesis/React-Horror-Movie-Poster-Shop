@@ -16,10 +16,10 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <nav class="navbar fixed-top navbar-light p-4 justify-content-center">
-        <Link to="/">
+        <Link to="/React-Horror-Movie-Poster-Shop/">
           <i class="fas fa-ghost"> <span> Home</span></i>
         </Link>
-        <Link to="/cart">
+        <Link to="/React-Horror-Movie-Poster-Shop/cart">
           <div className="ml-3 cart-icon">
             <i class="fas fa-shopping-cart"> <span> Cart</span></i>
             <div className="products-number">
@@ -27,12 +27,12 @@ function Navbar() {
             </div>
           </div>
         </Link>
-        <Link to="/login">
+        <Link to="/React-Horror-Movie-Poster-Shop/login">
           <div className="ml-3">
           <i class="fas fa-sign-in-alt"> <span> Sign in</span></i>
           </div>
         </Link>
-        <Link to="/registration">
+        <Link to="/React-Horror-Movie-Poster-Shop/registration">
           <div className="ml-3">
           <i class="fas fa-address-card"> <span> Register</span></i>
           </div>

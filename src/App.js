@@ -70,12 +70,12 @@ function App() {
         <ProductsContext.Provider value={{ listOfProducts, cartProducts, addToCart, removeFromCart, changeQuantity }}>
           <Navbar />
           <div>
-            <Route exact path='/' component={listOfProducts && ListOfProducts} />
-            <Route exact path='/cart' component={Cart} />
-            <Route exact path='/product/:id' component={ProductInfo} />
-            <Route exact path='/registration' component={Registration} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/checkout' component={Checkout}/>
+            <Route exact path='/React-Horror-Movie-Poster-Shop/' component={listOfProducts && ListOfProducts} />
+            <Route exact path='/React-Horror-Movie-Poster-Shop/cart' component={Cart} />
+            <Route exact path='/React-Horror-Movie-Poster-Shop/product/:id' component={ProductInfo} />
+            <Route exact path='/React-Horror-Movie-Poster-Shop/registration' component={Registration} />
+            <Route exact path='/React-Horror-Movie-Poster-Shop/login' component={Login} />
+            <Route exact path='/React-Horror-Movie-Poster-Shop/checkout' component={Checkout}/>
           </div>
         </ProductsContext.Provider>
       </Router>

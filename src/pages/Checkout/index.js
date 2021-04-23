@@ -28,7 +28,7 @@ function Checkout() {
                         You will receive a confirmation email, as soon as your order is processed.
                         <br/>
                         Meanwhile you can browse more items &nbsp;
-                        <Link className="link-to-home" to="/"><span className="link-to-home">here</span></Link>.
+                        <Link className="link-to-home" to="/React-Horror-Movie-Poster-Shop/"><span className="link-to-home">here</span></Link>.
                         </h2>}
                 </div>
 

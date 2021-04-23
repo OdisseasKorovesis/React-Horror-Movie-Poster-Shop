@@ -20,7 +20,7 @@ function Cart() {
                 <h2 className="empty-cart-text ml-5 text-white">Your cart is empty, almost like... a haunted house! 
                 <br/>
                 Try clicking &nbsp;
-                <Link className="link-to-home" to="/"><span className="link-to-home">here</span></Link>
+                <Link className="link-to-home" to="/React-Horror-Movie-Poster-Shop/"><span className="link-to-home">here</span></Link>
                 &nbsp; and adding some products.
                 </h2>
                 : cartProducts.map((product) => (

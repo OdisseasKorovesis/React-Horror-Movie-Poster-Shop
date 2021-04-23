@@ -41,7 +41,7 @@ function Product(props) {
                 </CardActionArea>
                 <div className='action-area'>
                     <CardActions>
-                        <Link to={`/product/${props.id}`}>
+                        <Link to={`/React-Horror-Movie-Poster-Shop/product/${props.id}`}>
                             <Button size="small" color="secondary">
                                 <span className="details-btn">View Details</span>
                             </Button>
