@@ -1,0 +1,13 @@
+.empty-cart-text {
+    font-family: 'Melted-Monster', cursive;
+    }
+
+.link-to-home {
+    transition: all 0.3s;
+    color: white;
+}
+
+.link-to-home:hover {
+    color: red;
+    
+}

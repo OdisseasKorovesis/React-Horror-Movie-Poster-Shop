@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 import Product from '../Product'
 import { useContext, useEffect, useState } from "react";
 import ProductsContext from "../../context";
+import './index.css'
 
 
 function Recommendations() {
@@ -26,19 +27,22 @@ function Recommendations() {
 
 
     return (
-        <div className="row">
+        <>
+        <h2 className="recommendations-title text-white mt-4">Other similar products:</h2>
+        <div className="row mb-5">
             {recommended && recommended.length != 0 ?
                 recommended.slice(0, 4).map((product) => (
                     <div className="col-3">
                         <Product key={product.id} id={product.id} title={product.title} description={""} price={product.vote_average} poster={product.poster_path}></Product>
                     </div>
                 )) :
-                shuffledListOfProducts.slice(0, 4).map((product) => (
-                    <div className="col-3">
+                shuffledListOfProducts.slice(0, 3).map((product) => (
+                    <div className="col-4">
                         <Product key={product.id} id={product.id} title={product.title} description={""} price={product.vote_average} poster={product.poster_path}></Product>
                     </div>
                 ))}
         </div>
+        </>
     );
 };
 

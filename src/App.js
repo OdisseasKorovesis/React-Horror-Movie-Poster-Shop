@@ -9,6 +9,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import useFetch from './hooks/useFetch';
 import Registration from './pages/Registration';
 import Login from './pages/Login';
+import CartProduct from './components/CartProduct';
+import PaymentForm from './components/PaymentForm';
+import Checkout from './pages/Checkout';
 
 function App() {
 
@@ -16,19 +19,31 @@ function App() {
   let [listOfProducts, setListOfProducts] = useState([]);
 
   const removeFromCart = (id) => {
+    const updatedList = new Array();
     cartProducts.forEach((product) => {
+      
       if (product.id == id) {
-        console.log('mpike')
-        setCartProducts(cartProducts.filter(product => product.id !== id));
+        
+      } else {
+        updatedList.push(product);
       }
+      setCartProducts(updatedList);
     });
   }
 
   const addToCart = (id) => {
     listOfProducts.forEach((product) => {
       if (product.id == id) {
-        console.log('mpike');
-        setCartProducts(oldArray => [...oldArray, product]);
+        let productExistsInCart = false;
+        for (const cartProduct of cartProducts) {
+          if (cartProduct.id == product.id) {
+            alert('This product is already in your cart! If you want to increase the quantity, you can do so inside the cart.')
+            productExistsInCart = true;
+          }
+        }
+        if(!productExistsInCart) {
+          setCartProducts(oldArray => [...oldArray, product]);
+        }
       }
     });
   };
@@ -60,6 +75,7 @@ function App() {
             <Route exact path='/product/:id' component={ProductInfo} />
             <Route exact path='/registration' component={Registration} />
             <Route exact path='/login' component={Login} />
+            <Route exact path='/checkout' component={Checkout}/>
           </div>
         </ProductsContext.Provider>
       </Router>

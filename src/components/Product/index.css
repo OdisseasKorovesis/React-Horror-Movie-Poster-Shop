@@ -10,3 +10,26 @@
     display: flex;
     justify-content: center;
 }
+
+.product-title {
+    font-family: 'Melted-Monster', cursive;
+}
+
+.add-btn {
+    font-family: 'Melted-Monster', cursive;
+    font-size: 1.5rem;
+    color: #dd2424;
+    text-decoration: none;
+}
+
+.details-btn {
+    font-family: 'Melted-Monster', cursive;
+    font-size: 1.5rem;
+    color: #000000;
+    text-decoration: none;
+
+}
+
+.link {
+    text-decoration: none;
+}

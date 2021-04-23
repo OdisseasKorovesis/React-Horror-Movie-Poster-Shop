@@ -1,6 +1,7 @@
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 import { useContext } from 'react';
 import ProductsContext from '../../context';
+import {Link} from 'react-router-dom';
 import './index.css';
 
 
@@ -44,6 +45,13 @@ function CartSummary() {
                     </TableRow>
                 </TableBody>
             </Table>
+            {cartProducts.length !== 0 ? <div className="row justify-content-center">
+                <Link to="/checkout">
+                    <button className="btn">Checkout</button>
+                </Link>
+            </div> : <></>}
+            
+
         </div>
 
     )

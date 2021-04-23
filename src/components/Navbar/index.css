@@ -13,7 +13,7 @@
     background-color: red;
     position: absolute;
     top: -0.4rem;
-    left: 1.5rem;
+    left: 1.2rem;
     font-size: 0.7rem;
     color: white;
 }
@@ -28,5 +28,15 @@
 .navbar {
     background-color: #3e0e0e;
     color: white;
+}
+
+.fas {
+    font-size: 1.5rem;
+}
+
+.fas > span {
+    font-family: 'Melted-Monster', cursive;
+    font-weight: 100;
+    /* font-size: 2rem; */
 }
 

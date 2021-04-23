@@ -17,11 +17,11 @@ function Navbar() {
     <div className="navbar-container">
       <nav class="navbar fixed-top navbar-light p-4 justify-content-center">
         <Link to="/">
-          <i class="fas fa-ghost fa-2x"></i>
+          <i class="fas fa-ghost"> <span> Home</span></i>
         </Link>
         <Link to="/cart">
           <div className="ml-3 cart-icon">
-            <i class="fas fa-shopping-cart fa-2x"></i>
+            <i class="fas fa-shopping-cart"> <span> Cart</span></i>
             <div className="products-number">
               {cartProducts.length}
             </div>
@@ -29,12 +29,12 @@ function Navbar() {
         </Link>
         <Link to="/login">
           <div className="ml-3">
-          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <i class="fas fa-sign-in-alt"> <span> Sign in</span></i>
           </div>
         </Link>
         <Link to="/registration">
           <div className="ml-3">
-          <i class="fas fa-address-card fa-2x"></i>
+          <i class="fas fa-address-card"> <span> Register</span></i>
           </div>
         </Link>
       </nav>

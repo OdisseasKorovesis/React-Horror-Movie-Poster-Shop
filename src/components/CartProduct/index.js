@@ -1,4 +1,5 @@
 import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, Button, TextField } from '@material-ui/core'
+import './index.css'
 import { useState, useEffect } from 'react';
 
 function CartProduct(props) {
@@ -30,13 +31,10 @@ function CartProduct(props) {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {props.title}
+                        <span class="poster-title">{props.title}</span>
                     </Typography>
-                    {/* <Typography gutterBottom variant="body2" color="textSecondary" component="p">
-                        {props.description}
-                    </Typography> */}
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Total price: <span>{props.price * productCount}</span>
+                        Total price: <span>{props.price * productCount} €</span>
                     </Typography>
                 </CardContent>
             </CardActionArea>
@@ -50,7 +48,7 @@ function CartProduct(props) {
                     +
                 </Button>
                 <Button className='quantity-btn' size="small" color="primary" onClick={() => props.removeFromCart(`${props.id}`)}>
-                    Remove from cart
+                    Remove
                 </Button>
             </CardActions>
         </Card>

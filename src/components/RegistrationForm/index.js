@@ -34,12 +34,8 @@ function RegistrationForm() {
                         {errors.email?.type === "required" && "Email is required"}
                         {errors.email?.type === "pattern" && "Please enter valid email"}
                     </div>
-                    <div class="form-group">
-                        <label for="password" className="text-white">Password</label>
-                        <input name="password" ref={register({ required: true, pattern: { value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@\[-`{-~]).{6,64}$/ } },)} type="password" class="form-control" id="password" placeholder="Enter Desired Password" />
-                        {errors.password?.type === "required" && "Password is required"}
-                        {errors.password?.type === "pattern" && "Password must be longer than 6 characters and contain: 1 uppercase, 1 lowercase, 1 special, 1 number"}
-                    </div>
+                    
+                    
                     <div class="form-group">
                         <label for="repeatPassword" className="text-white">Password</label>
                         <input name="repeatPassword" ref={register({ validate: value => value === password.current || "The passwords do not match" })} type="password" class="form-control" id="repeatPassword" placeholder="Repeat Your Password" />

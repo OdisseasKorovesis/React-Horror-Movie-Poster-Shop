@@ -9,8 +9,17 @@ function Product(props) {
 
     const posterUrl = `https://image.tmdb.org/t/p/original/${props.poster}`;
 
+    const getDescriptionText = () => {
+
+
+        let description = props.description.length > 145 ? props.description.substring(0, 145) : props.description;
+        description = description.length !== 200 ? description.substring(0, Math.min(description.length, description.lastIndexOf(" "))) + " . . ." : description;
+        return description.trim();
+    }
+
+
     return (
-        <div className="">
+        <div className="wrapper">
             <Card className='card-root'>
                 <CardActionArea>
                     <CardMedia
@@ -20,26 +29,26 @@ function Product(props) {
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            {props.title}
+                            <p className="product-title">{props.title}</p>
                         </Typography>
                         <Typography gutterBottom variant="body2" color="textSecondary" component="p">
-                            {props.description}
+                            {getDescriptionText()}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Total price: <span>{props.price * productCount}</span>
+                            Total price: <span>{props.price * productCount}€</span>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
                 <div className='action-area'>
                     <CardActions>
                         <Link to={`/product/${props.id}`}>
-                            <Button className='quantity-btn' size="small" color="secondary">
-                                View Details
-                        </Button>
+                            <Button size="small" color="secondary">
+                                <span className="details-btn">View Details</span>
+                            </Button>
                         </Link>
-                        <Button className='quantity-btn' size="small" color="primary" onClick={() => props.addToCart(`${props.id}`)}>
-                            Add to cart
-                    </Button>
+                        <Button className='add-btn' size="small" color="primary" onClick={() => props.addToCart(`${props.id}`)}>
+                            <span className="add-btn">Add to Cart</span>
+                        </Button>
                     </CardActions>
                 </div>
 
